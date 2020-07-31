@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context="com.example.firstapp.ContactFragment">
+    tools:context="com.example.firstapp.ContactFragment"
+    android:background="@drawable/black5">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
