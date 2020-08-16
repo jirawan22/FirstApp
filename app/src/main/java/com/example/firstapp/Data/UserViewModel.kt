@@ -1,26 +1,23 @@
-package com.example.firstapp.Data
-
+import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.example.firstapp.Data.User
+import com.example.firstapp.Data.UserDatabase
+import com.example.firstapp.Data.UserRepository
 import kotlinx.coroutines.Dispatchers
-import java.lang.Appendable
-
-class UserViewModel (appendable: Appendable): AndroidViewModel(application) {
-
+import kotlinx.coroutines.launch
+class UserViewModel(application: Application): AndroidViewModel(application) {
     private val readAllData: LiveData<List<User>>
     private val repository: UserRepository
-
     init {
         val userDao = UserDatabase.getDatabase(application).userDao()
         repository = UserRepository(userDao)
         readAllData = repository.readAllData
     }
-
     fun addUser(user: User) {
-        viewModelScope.Launch(Dispatchers.IO) {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.addUser(user)
-
         }
     }
 }
