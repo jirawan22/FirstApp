@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">FirstApp</string>
     <string name="contact">Contact</string>
+    <string name="contactlist">ContactList</string>
     <string name="about">About</string>
     <string name="fb">หมิว จิ</string>
     <!-- TODO: Remove or change this placeholder text -->

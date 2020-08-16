@@ -22,7 +22,7 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.firstapp.Fragment.list.ListFragment"
-        android:label="fragment_list"
+        android:label="ContactList"
         tools:layout="@layout/fragment_list" >
         <action
             android:id="@+id/action_listFragment_to_addFragment"
@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/addFragment"
         android:name="com.example.firstapp.Fragment.Add.AddFragment"
-        android:label="fragment_add"
+        android:label="ADD"
         tools:layout="@layout/fragment_add" >
         <action
             android:id="@+id/action_addFragment_to_listFragment"
